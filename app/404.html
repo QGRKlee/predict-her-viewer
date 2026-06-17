@@ -12480,22 +12480,6 @@
     /* The wrap defines the moon's actual size — Three.js reads parentElement
        dimensions on init (not canvas CSS), so size MUST live on the wrap.
        Sized to match the home hero exactly: full content width × 300px tall. */
-    .her-pulse-bg-moon-wrap {
-      position: absolute;
-      top: max(56px, env(safe-area-inset-top, 0px) + 12px);
-      left: 16px;
-      right: 16px;
-      height: 300px;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 700ms ease-out 150ms;
-    }
-    .her-pulse-bg-moon-wrap canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-    .her-pulse-overlay.her-pulse-open .her-pulse-bg-moon-wrap { opacity: 1; }
     /* Dense starfield — tiny pinprick stars scattered across the whole backdrop.
        Slow brightness twinkle. */
     .her-pulse-backdrop::before {
@@ -12890,24 +12874,20 @@
       margin-top: 8px;
     }
     .her-onboarding-orb {
-      --her-orb-color: rgba(240, 112, 144, 0.95);
-      --her-orb-glow: rgba(224, 48, 96, 0.32);
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 4px;
-      border-radius: 50%;
-      overflow: hidden;
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 2px;
       position: relative;
-      background: var(--surface-soft, #FFF6FA);
-      box-shadow:
-        0 0 24px var(--her-orb-glow),
-        0 0 48px var(--her-orb-glow);
-      animation: her-orb-pulse 4s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .her-onboarding-orb canvas {
+    .her-onboarding-orb img {
       width: 100%;
       height: 100%;
-      display: block;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      filter: drop-shadow(0 12px 22px rgba(160, 32, 80, 0.18));
     }
     .her-onboarding-mock {
       margin: 12px auto 8px;
@@ -13018,7 +12998,7 @@
       font-style: italic;
     }
   </style>
-  <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-Cg8eM-Xl.js"></script>
+  <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-e9z-167c.js"></script>
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/astro-CKYIcK6G.js">
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/three-Bv1OsDGp.js">
 </head>
@@ -13818,9 +13798,6 @@
   <!-- Her Pulse — daily AI check-in overlay -->
   <div id="her-pulse-overlay" class="her-pulse-overlay" hidden aria-hidden="true">
     <div class="her-pulse-backdrop" id="her-pulse-backdrop">
-      <div class="her-pulse-bg-moon-wrap">
-        <canvas id="her-pulse-bg-moon-canvas"></canvas>
-      </div>
     </div>
     <div class="her-pulse-card" role="dialog" aria-label="Her — your daily check-in">
       <button class="her-pulse-close" id="her-pulse-close" aria-label="Close">×</button>
