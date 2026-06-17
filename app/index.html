@@ -13155,6 +13155,261 @@
       color: rgba(43, 16, 32, 0.5);
       font-style: italic;
     }
+
+    /* ============================================================
+       PREDICTHER STYLE GUIDE LOCK — final app-wide polish
+       Brand colors: #E03060, #F07090, #A02050 + white surfaces.
+       ============================================================ */
+    :root {
+      --ph-primary: #E03060;
+      --ph-soft: #F07090;
+      --ph-deep: #A02050;
+      --ph-ink: #2B1020;
+      --ph-line: rgba(224, 48, 96, 0.18);
+      --ph-card-shadow: 0 14px 34px rgba(160, 32, 80, 0.08);
+      --ph-button-shadow: 0 10px 22px rgba(160, 32, 80, 0.22);
+    }
+    body,
+    #app,
+    .scroll-content {
+      background: #ffffff !important;
+      color: var(--ph-ink) !important;
+    }
+    .header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom-color: var(--ph-line) !important;
+      box-shadow: 0 10px 28px rgba(160, 32, 80, 0.08) !important;
+    }
+    .header-tab {
+      background: rgba(160, 32, 80, 0.06) !important;
+      border-color: rgba(160, 32, 80, 0.1) !important;
+      color: var(--ph-deep) !important;
+    }
+    .header-tab.active,
+    .header-tab[aria-selected="true"],
+    .forecast-subtab.active {
+      background: var(--ph-deep) !important;
+      border-color: var(--ph-deep) !important;
+      color: #ffffff !important;
+      box-shadow: var(--ph-button-shadow) !important;
+    }
+    #settings-btn,
+    html[data-theme="light"] #settings-btn,
+    html[data-theme="sunlight"] #settings-btn,
+    html[data-theme="brand"] #settings-btn {
+      width: 26px !important;
+      height: 26px !important;
+      min-width: 26px !important;
+      min-height: 26px !important;
+      top: calc(env(safe-area-inset-top, 44px) + 17px) !important;
+      right: 20px !important;
+      background: var(--ph-deep) !important;
+      border-color: rgba(160, 32, 80, 0.18) !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 18px rgba(160, 32, 80, 0.24) !important;
+    }
+    .reading-hero,
+    .stats-row {
+      background: linear-gradient(135deg, var(--ph-deep), #C02266 58%, var(--ph-primary)) !important;
+      border: 1px solid rgba(160, 32, 80, 0.22) !important;
+      color: #ffffff !important;
+      box-shadow: 0 14px 30px rgba(160, 32, 80, 0.18) !important;
+    }
+    .reading-hero .reading-title,
+    .reading-hero .section-title,
+    .reading-hero .earth-moon-title,
+    .stats-row .stat-value {
+      color: #ffffff !important;
+      text-shadow: none !important;
+    }
+    .reading-hero .synch-section-hint,
+    .reading-hero .reading-date,
+    .reading-hero .earth-moon-sub,
+    .stats-row .stat-label {
+      color: rgba(255, 255, 255, 0.74) !important;
+      text-shadow: none !important;
+    }
+    .launch-spine,
+    .launch-spine-card {
+      background: linear-gradient(135deg, var(--ph-deep), #C02266 58%, var(--ph-primary)) !important;
+      border-color: rgba(255, 255, 255, 0.24) !important;
+      color: #ffffff !important;
+    }
+    .launch-spine-kicker {
+      display: none !important;
+    }
+    .launch-spine-title,
+    .launch-spine-card-title {
+      color: #ffffff !important;
+    }
+    .launch-spine-copy,
+    .launch-spine-card-label,
+    .launch-spine-card-meta {
+      color: rgba(255, 255, 255, 0.76) !important;
+    }
+    :is(
+      .moon-phase-badge,
+      .home-bio-section .vitals-bio-grid,
+      .peak-card,
+      .forecast-item,
+      .period-log-bar,
+      .intel-card,
+      .info-section,
+      .week-ahead,
+      .vitals-bio-card,
+      .hormone-chart-card,
+      .oura-insights-card,
+      .period-checkin,
+      .natal-row,
+      .countdown-card,
+      .activity-stat-card,
+      .activity-breakdown,
+      .activity-trend-wrap,
+      .activity-cycle-card,
+      .activity-empty,
+      .activity-workout-item,
+      .activity-calendar-wrap,
+      .activity-calendar-day,
+      .activity-log-form,
+      .stress-card,
+      .stress-alert-card,
+      .stress-nudge,
+      .stress-empty,
+      .hrv-status-card,
+      .stress-trend-card,
+      .stoplight-card,
+      .fertility-predictive-panel,
+      .action-card,
+      .prediction-item,
+      .settings-section,
+      .period-editor,
+      .period-editor-item,
+      .period-edit-content,
+      .notif-item,
+      .body-signals-card,
+      .cycle-journey,
+      .vitals-narrative-card,
+      .partner-education,
+      .edu-phase-item,
+      .sacred-card,
+      .sacred-practice,
+      .synch-calendar,
+      .synch-cluster-card,
+      .synch-bubble-stage,
+      .synch-web-reading,
+      .synch-bubble-day,
+      .friend-card,
+      .compat-card,
+      .her-pulse-card,
+      .her-onboarding-card
+    ) {
+      background: #ffffff !important;
+      background-image: none !important;
+      border-color: var(--ph-line) !important;
+      color: var(--ph-ink) !important;
+      box-shadow: var(--ph-card-shadow) !important;
+      text-shadow: none !important;
+    }
+    :is(
+      .synch-bubble,
+      .synch-bubble.primary,
+      .synch-bubble-center,
+      .synch-friend-dot
+    ) {
+      background: radial-gradient(circle at 38% 30%, rgba(255, 255, 255, 0.42), transparent 34%),
+        linear-gradient(135deg, var(--ph-deep), var(--ph-primary)) !important;
+      border-color: rgba(255, 255, 255, 0.28) !important;
+      color: #ffffff !important;
+      box-shadow: 0 14px 30px rgba(160, 32, 80, 0.2) !important;
+    }
+    .synch-bubble strong,
+    .synch-bubble-center strong,
+    .synch-friend-dot,
+    .synch-bubble span,
+    .synch-bubble em,
+    .synch-bubble small,
+    .synch-bubble-center span,
+    .synch-bubble-center em {
+      color: #ffffff !important;
+    }
+    :is(
+      .section-title,
+      .reading-title,
+      .peak-card-title,
+      .forecast-title,
+      .intel-card-title,
+      .stat-value,
+      .moon-phase-name,
+      .vitals-bio-value,
+      .activity-stat-value,
+      .activity-cycle-phase,
+      .stress-alert-title,
+      .edu-phase-name,
+      .sacred-title,
+      .synch-cal-month,
+      .settings-value,
+      .period-editor-title
+    ) {
+      color: var(--ph-deep) !important;
+      text-shadow: none !important;
+    }
+    :is(
+      .section-body,
+      .reading-body,
+      .peak-card-body,
+      .forecast-body,
+      .intel-card-text,
+      .stat-label,
+      .moon-illumination,
+      .vitals-bio-label,
+      .activity-stat-label,
+      .activity-stat-detail,
+      .activity-empty-text,
+      .activity-cycle-guidance,
+      .stress-alert-body,
+      .stress-nudge-text,
+      .edu-body,
+      .edu-phase-desc,
+      .sacred-body,
+      .sacred-practice-text,
+      .synch-section-hint,
+      .settings-label,
+      .settings-status
+    ) {
+      color: rgba(43, 16, 32, 0.66) !important;
+      text-shadow: none !important;
+    }
+    :is(
+      .activity-log-btn,
+      .activity-connect-btn,
+      .settings-btn,
+      .period-edit-btn.save,
+      .period-editor-save,
+      .period-editor-reload,
+      .her-pulse-send,
+      .paywall-code-submit,
+      #oracle-send,
+      #claude-send
+    ) {
+      background: var(--ph-deep) !important;
+      border-color: var(--ph-deep) !important;
+      color: #ffffff !important;
+      box-shadow: var(--ph-button-shadow) !important;
+      text-shadow: none !important;
+    }
+    :is(
+      .period-editor-overlay,
+      #oracle-backdrop,
+      #claude-backdrop,
+      .period-edit-modal,
+      .her-onboarding-backdrop
+    ) {
+      background: rgba(160, 32, 80, 0.22) !important;
+    }
+    .her-pulse-backdrop {
+      background: radial-gradient(circle at 50% 24%, rgba(240, 112, 144, 0.18), transparent 58%),
+        rgba(255, 246, 250, 0.96) !important;
+    }
   </style>
   <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-nthJbUX0.js"></script>
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/astro-CKYIcK6G.js">
@@ -13218,7 +13473,6 @@
       </div>
 
       <section class="launch-spine" aria-label="PredictHer launch focus">
-        <div class="launch-spine-kicker">PredictHer beta</div>
         <h1 class="launch-spine-title">Your rhythm, today</h1>
         <p class="launch-spine-copy">Body signal. Fertility rhythm. Partner timing. One next move.</p>
         <div class="launch-spine-grid">

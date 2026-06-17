@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>PredictHer - App Preview</title>
-  <link rel="icon" href="app/brand/butterfly-logo.jpg?v=db27596">
+  <link rel="icon" href="app/brand/butterfly-logo.jpg?v=7dd6b93">
   <style>
     :root {
       --phone-w: 390px;
@@ -15,6 +15,7 @@
       --brand-soft: #f07090;
       --brand-deep: #a02050;
       --brand-ink: #2b1020;
+      --brand-frame: #a02050;
       --brand-line: rgba(224, 48, 96, 0.18);
     }
     * { box-sizing: border-box; }
@@ -58,10 +59,10 @@
       padding: var(--bezel);
       border-radius: var(--radius);
       background:
-        linear-gradient(160deg, #ffffff 0%, #f7edf1 42%, #2b1020 100%);
+        linear-gradient(160deg, #ffffff 0%, #fff6fa 38%, #f07090 70%, var(--brand-frame) 100%);
       box-shadow:
         0 2px 6px rgba(43, 16, 32, 0.12),
-        0 30px 70px rgba(160, 32, 80, 0.22),
+        0 30px 70px rgba(160, 32, 80, 0.24),
         inset 0 0 0 1px rgba(160, 32, 80, 0.14);
     }
     .device::before {
@@ -72,8 +73,8 @@
       width: 3px;
       height: 64px;
       border-radius: 3px;
-      background: #2b1020;
-      box-shadow: 0 84px 0 #2b1020, 0 -96px 0 #2b1020;
+      background: var(--brand-frame);
+      box-shadow: 0 84px 0 var(--brand-frame), 0 -96px 0 var(--brand-frame);
     }
     .screen {
       position: relative;
@@ -111,7 +112,7 @@
   </p>
   <div class="device" role="img" aria-label="iPhone-style preview of the PredictHer app">
     <div class="screen">
-      <iframe src="app/?v=db27596" title="PredictHer app" allow="accelerometer; gyroscope; geolocation"></iframe>
+      <iframe src="app/?v=7dd6b93" title="PredictHer app" allow="accelerometer; gyroscope; geolocation"></iframe>
     </div>
   </div>
   <p class="hint">Browser preview only. Native features such as push, health, and purchases require a device. The app runs inside an iPhone-sized 390 x 844 viewport.</p>
