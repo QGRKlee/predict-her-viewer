@@ -3,84 +3,136 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>PredictHer — App Preview</title>
-  <link rel="icon" href="app/logo.png">
+  <title>PredictHer - App Preview</title>
+  <link rel="icon" href="app/brand/butterfly-logo.jpg">
   <style>
-    :root{
-      --phone-w:390px;     /* iPhone logical width */
-      --phone-h:844px;     /* iPhone logical height */
-      --bezel:14px;
-      --radius:56px;
+    :root {
+      --phone-w: 390px;
+      --phone-h: 844px;
+      --bezel: 14px;
+      --radius: 56px;
+      --brand-primary: #e03060;
+      --brand-soft: #f07090;
+      --brand-deep: #a02050;
+      --brand-ink: #2b1020;
+      --brand-line: rgba(224, 48, 96, 0.18);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:18px;
-      padding:28px 16px;
-      background:radial-gradient(1200px 800px at 50% -10%,#2a2433 0%,#15121b 55%,#0c0a11 100%);
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-      color:#e7e2ef;
+    * { box-sizing: border-box; }
+    html,
+    body {
+      min-height: 100%;
+      margin: 0;
+      background: #ffffff;
+      color: var(--brand-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-    .preview-title{
-      font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
-      color:rgba(231,226,239,.6);font-weight:600;margin:0;
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 24px 16px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(240, 112, 144, 0.14), transparent 34%),
+        #ffffff;
     }
-    /* Device frame */
-    .device{
-      position:relative;
-      width:calc(var(--phone-w) + var(--bezel)*2);
-      height:calc(var(--phone-h) + var(--bezel)*2);
-      max-height:calc(100vh - 96px);
-      aspect-ratio:calc(var(--phone-w) + var(--bezel)*2) / calc(var(--phone-h) + var(--bezel)*2);
-      background:linear-gradient(160deg,#3a3a3e 0%,#0f0f12 45%,#1c1c20 100%);
-      border-radius:var(--radius);
-      padding:var(--bezel);
+    .preview-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      color: var(--brand-deep);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+    .preview-title img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    .device {
+      position: relative;
+      width: calc(var(--phone-w) + var(--bezel) * 2);
+      height: calc(var(--phone-h) + var(--bezel) * 2);
+      max-height: calc(100vh - 96px);
+      aspect-ratio: calc(var(--phone-w) + var(--bezel) * 2) / calc(var(--phone-h) + var(--bezel) * 2);
+      padding: var(--bezel);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(160deg, #ffffff 0%, #f7edf1 42%, #2b1020 100%);
       box-shadow:
-        0 2px 6px rgba(0,0,0,.5),
-        0 30px 70px rgba(0,0,0,.65),
-        inset 0 0 0 2px rgba(255,255,255,.06);
+        0 2px 6px rgba(43, 16, 32, 0.12),
+        0 30px 70px rgba(160, 32, 80, 0.22),
+        inset 0 0 0 1px rgba(160, 32, 80, 0.14);
     }
-    .device::before{ /* side buttons hint */
-      content:"";position:absolute;left:-2px;top:150px;width:3px;height:64px;
-      border-radius:3px;background:#1a1a1e;box-shadow:0 84px 0 #1a1a1e,0 -96px 0 #1a1a1e;
+    .device::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 150px;
+      width: 3px;
+      height: 64px;
+      border-radius: 3px;
+      background: #2b1020;
+      box-shadow: 0 84px 0 #2b1020, 0 -96px 0 #2b1020;
     }
-    .screen{
-      position:relative;
-      width:100%;height:100%;
-      background:#000;
-      border-radius:calc(var(--radius) - var(--bezel));
-      overflow:hidden;
+    .screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: calc(var(--radius) - var(--bezel));
+      background: #ffffff;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
     }
-    .notch{
-      position:absolute;top:0;left:50%;transform:translateX(-50%);
-      width:160px;height:30px;
-      background:#000;
-      border-radius:0 0 18px 18px;
-      z-index:3;pointer-events:none;
+    .notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 3;
+      width: 160px;
+      height: 30px;
+      transform: translateX(-50%);
+      border-radius: 0 0 18px 18px;
+      background: #050306;
+      pointer-events: none;
     }
-    .screen iframe{
-      position:absolute;inset:0;
-      width:100%;height:100%;
-      border:0;
-      background:#000;
+    .screen iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #ffffff;
     }
-    .hint{font-size:11px;color:rgba(231,226,239,.35);margin:0;text-align:center;max-width:var(--phone-w)}
-    @media (max-height:920px){ :root{ --radius:46px } }
+    .hint {
+      max-width: var(--phone-w);
+      margin: 0;
+      color: rgba(43, 16, 32, 0.48);
+      font-size: 11px;
+      line-height: 1.45;
+      text-align: center;
+    }
+    @media (max-height: 920px) {
+      :root { --radius: 46px; }
+    }
   </style>
 </head>
 <body>
-  <p class="preview-title">PredictHer · App Preview</p>
+  <p class="preview-title">
+    <img src="app/brand/butterfly-logo.jpg" alt="">
+    <span>PredictHer App Preview</span>
+  </p>
   <div class="device" role="img" aria-label="iPhone-style preview of the PredictHer app">
     <div class="screen">
       <div class="notch"></div>
       <iframe src="app/" title="PredictHer app" allow="accelerometer; gyroscope; geolocation"></iframe>
     </div>
   </div>
-  <p class="hint">Browser preview only — native features (push, health, purchases) require a device. The app runs inside an iPhone-sized 390×844 viewport.</p>
+  <p class="hint">Browser preview only. Native features such as push, health, and purchases require a device. The app runs inside an iPhone-sized 390 x 844 viewport.</p>
 </body>
 </html>
