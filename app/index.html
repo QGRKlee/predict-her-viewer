@@ -13410,6 +13410,301 @@
       background: radial-gradient(circle at 50% 24%, rgba(240, 112, 144, 0.18), transparent 58%),
         rgba(255, 246, 250, 0.96) !important;
     }
+
+    /* ============================================================
+       DENSITY PASS — native app rhythm, tighter hierarchy
+       ============================================================ */
+    :root {
+      --ph-card-shadow: 0 8px 22px rgba(160, 32, 80, 0.07);
+      --ph-button-shadow: 0 6px 15px rgba(160, 32, 80, 0.18);
+      --ph-radius-card: 12px;
+      --ph-radius-panel: 16px;
+    }
+    .header {
+      min-height: calc(env(safe-area-inset-top, 44px) + 82px) !important;
+      padding: env(safe-area-inset-top, 44px) 12px 8px 14px !important;
+      gap: 6px 10px !important;
+    }
+    .brand-lockup {
+      gap: 6px !important;
+      margin-left: 10px !important;
+    }
+    .header-logo {
+      width: 37px !important;
+      height: 37px !important;
+    }
+    .brand-wordmark-main {
+      font-size: 21px !important;
+    }
+    .brand-wordmark-sub {
+      font-size: 7.5px !important;
+      letter-spacing: 1px !important;
+    }
+    .header-tabs {
+      gap: 5px !important;
+    }
+    .header-tab {
+      min-height: 22px !important;
+      padding: 5px 4px 4px !important;
+      font-size: 9px !important;
+      letter-spacing: 0.48px !important;
+    }
+    #settings-btn,
+    html[data-theme="light"] #settings-btn,
+    html[data-theme="sunlight"] #settings-btn,
+    html[data-theme="brand"] #settings-btn {
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      min-height: 24px !important;
+      top: calc(env(safe-area-inset-top, 44px) + 16px) !important;
+      right: 19px !important;
+    }
+    #settings-btn::before,
+    html[data-theme="light"] #settings-btn::before,
+    html[data-theme="sunlight"] #settings-btn::before {
+      width: 12px !important;
+      height: 12px !important;
+    }
+    .launch-spine {
+      margin: 10px 18px 14px !important;
+      padding: 15px !important;
+      border-radius: var(--ph-radius-panel) !important;
+      box-shadow: 0 12px 28px rgba(160, 32, 80, 0.16) !important;
+    }
+    .launch-spine-title {
+      font-size: 27px !important;
+      line-height: 1.04 !important;
+    }
+    .launch-spine-copy {
+      margin: 6px 0 12px !important;
+      font-size: 12.8px !important;
+      line-height: 1.35 !important;
+    }
+    .launch-spine-grid {
+      gap: 8px !important;
+    }
+    .launch-spine-card {
+      min-height: 86px !important;
+      padding: 11px !important;
+      border-radius: 12px !important;
+      gap: 6px !important;
+    }
+    .launch-spine-card-label {
+      font-size: 9px !important;
+      letter-spacing: 0.85px !important;
+    }
+    .launch-spine-card-title {
+      font-size: 15.5px !important;
+      line-height: 1.1 !important;
+    }
+    .launch-spine-card-meta {
+      font-size: 11px !important;
+      line-height: 1.2 !important;
+    }
+    .reading-hero {
+      margin: 10px 18px 14px !important;
+      padding: 16px 16px 14px !important;
+      border-radius: var(--ph-radius-panel) !important;
+      text-align: center !important;
+      box-shadow: 0 10px 24px rgba(160, 32, 80, 0.15) !important;
+    }
+    .reading-hero .reading-title {
+      font-size: 24px !important;
+      line-height: 1.05 !important;
+    }
+    .reading-hero .synch-section-hint,
+    .reading-hero .earth-moon-sub {
+      margin-top: 4px !important;
+      font-size: 11.5px !important;
+      line-height: 1.25 !important;
+      letter-spacing: 0.4px !important;
+    }
+    .stats-row {
+      margin: 0 18px 14px !important;
+      padding: 11px 6px !important;
+      border-radius: 14px !important;
+    }
+    .stat-value,
+    .stats-row .stat-value {
+      font-size: 27px !important;
+      line-height: 1 !important;
+    }
+    .stat-label,
+    .stats-row .stat-label {
+      margin-top: 3px !important;
+      font-size: 10px !important;
+      letter-spacing: 0.9px !important;
+    }
+    :is(
+      .moon-phase-badge,
+      .home-bio-section .vitals-bio-grid,
+      .peak-card,
+      .forecast-item,
+      .period-log-bar,
+      .intel-card,
+      .info-section,
+      .week-ahead,
+      .vitals-bio-card,
+      .hormone-chart-card,
+      .oura-insights-card,
+      .period-checkin,
+      .natal-row,
+      .countdown-card,
+      .activity-stat-card,
+      .activity-breakdown,
+      .activity-trend-wrap,
+      .activity-cycle-card,
+      .activity-empty,
+      .activity-workout-item,
+      .activity-calendar-wrap,
+      .activity-calendar-day,
+      .activity-log-form,
+      .stress-card,
+      .stress-alert-card,
+      .stress-nudge,
+      .stress-empty,
+      .hrv-status-card,
+      .stress-trend-card,
+      .stoplight-card,
+      .fertility-predictive-panel,
+      .action-card,
+      .prediction-item,
+      .settings-section,
+      .period-editor,
+      .period-editor-item,
+      .period-edit-content,
+      .notif-item,
+      .body-signals-card,
+      .cycle-journey,
+      .vitals-narrative-card,
+      .partner-education,
+      .edu-phase-item,
+      .sacred-card,
+      .sacred-practice,
+      .synch-calendar,
+      .synch-cluster-card,
+      .synch-bubble-stage,
+      .synch-web-reading,
+      .synch-bubble-day,
+      .friend-card,
+      .compat-card
+    ) {
+      border-radius: var(--ph-radius-card) !important;
+      box-shadow: var(--ph-card-shadow) !important;
+    }
+    :is(
+      .peak-card,
+      .intel-card,
+      .vitals-bio-card,
+      .hormone-chart-card,
+      .oura-insights-card,
+      .countdown-card,
+      .activity-stat-card,
+      .activity-breakdown,
+      .activity-cycle-card,
+      .stress-card,
+      .stress-alert-card,
+      .stoplight-card,
+      .fertility-predictive-panel,
+      .settings-section,
+      .synch-calendar,
+      .friend-card,
+      .compat-card
+    ) {
+      padding: 13px 14px !important;
+      margin-bottom: 12px !important;
+    }
+    .activity-stats,
+    .peak-cards {
+      gap: 8px !important;
+      padding: 0 18px !important;
+      margin-bottom: 14px !important;
+    }
+    .activity-stat-value,
+    .peak-card-value,
+    .countdown-days {
+      font-size: 27px !important;
+      line-height: 1.05 !important;
+    }
+    .activity-stat-label,
+    .peak-card-label,
+    .activity-section-label,
+    .forecast-section-label,
+    .vitals-section-label,
+    .settings-section-label,
+    .synch-section-label,
+    .friends-section-label {
+      font-size: 10px !important;
+      letter-spacing: 1.15px !important;
+      margin-bottom: 8px !important;
+    }
+    .activity-empty,
+    .stress-empty {
+      padding: 18px 16px !important;
+      margin: 0 18px 14px !important;
+    }
+    .activity-empty-icon,
+    .stress-empty-icon {
+      font-size: 30px !important;
+      margin-bottom: 8px !important;
+    }
+    .activity-empty-text,
+    .stress-empty-body {
+      font-size: 12.5px !important;
+      line-height: 1.42 !important;
+      margin-bottom: 10px !important;
+    }
+    :is(
+      .activity-log-btn,
+      .activity-connect-btn,
+      .settings-btn,
+      .period-edit-btn,
+      .period-editor-save,
+      .period-editor-reload,
+      .period-history-verify-btn,
+      .wearable-connect-btn,
+      .friend-action-btn,
+      .synch-add-btn,
+      .stress-calendar-btn,
+      .moon-copy-btn,
+      .her-btn,
+      .ob-btn
+    ) {
+      min-height: 34px !important;
+      padding: 9px 13px 8px !important;
+      border-radius: 999px !important;
+      font-size: 11px !important;
+      letter-spacing: 1.15px !important;
+      line-height: 1.05 !important;
+    }
+    .wearable-connect-row {
+      gap: 8px !important;
+      margin: 0 18px 14px !important;
+    }
+    .wearable-connect-btn {
+      min-height: 42px !important;
+    }
+    .settings-section {
+      margin: 0 18px 12px !important;
+    }
+    .settings-row {
+      padding: 10px 0 !important;
+    }
+    .settings-label,
+    .settings-value,
+    .settings-status,
+    .settings-input {
+      font-size: 12.5px !important;
+      line-height: 1.35 !important;
+    }
+    .bottom-spacer {
+      height: 22px !important;
+    }
+    .card-loading {
+      padding: 14px !important;
+      font-size: 12px !important;
+    }
   </style>
   <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-nthJbUX0.js"></script>
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/astro-CKYIcK6G.js">
