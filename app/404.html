@@ -1591,7 +1591,15 @@
       font-size: 18px;
     }
     #settings-btn {
-      bottom: max(178px, calc(50vh - 246px));
+      top: calc(env(safe-area-inset-top, 44px) + 14px);
+      right: 18px;
+      bottom: auto;
+      width: 34px;
+      height: 34px;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.86);
+      border-color: rgba(160, 32, 80, 0.12);
+      box-shadow: 0 8px 18px rgba(160, 32, 80, 0.1);
     }
     #theme-quick-btn:hover,
     #settings-btn:hover {
@@ -1614,6 +1622,11 @@
       cursor: pointer;
       z-index: 910;
       transition: all 0.2s;
+    }
+    #theme-quick-btn,
+    #notif-bell,
+    .ai-fabs {
+      display: none !important;
     }
     #notif-bell:hover {
       background: rgba(224, 48, 96, 0.15);
