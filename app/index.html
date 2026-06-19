@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>PredictHer</title>
   <style>
     html,
@@ -13705,8 +13705,107 @@
       padding: 14px !important;
       font-size: 12px !important;
     }
+
+    /* ============================================================
+       BRAND AUDIT PASS — remove legacy dark motif leftovers
+       ============================================================ */
+    html,
+    body,
+    #app,
+    .scroll-content {
+      background: #FFFFFF !important;
+      color: #2B1020 !important;
+    }
+    :is(
+      .stress-today-card,
+      .stress-stat-card,
+      .stress-interpretation,
+      .activity-calendar-entry,
+      .activity-edit-input,
+      .period-edit-input,
+      #oracle-input,
+      #claude-input,
+      .circle-invite-grid .friends-share-code,
+      .circle-invite-grid .friends-add-code,
+      .friends-share-code,
+      .friends-add-code,
+      .partner-scaffold-placeholder,
+      .partner-chat-input-row,
+      .partner-chat-history,
+      .partner-chat-paywall-card
+    ) {
+      background: #FFFFFF !important;
+      color: #2B1020 !important;
+      border-color: #F1CAD6 !important;
+      box-shadow: 0 8px 22px rgba(160, 32, 80, 0.07) !important;
+    }
+    :is(
+      .stress-today-card,
+      .stress-interpretation,
+      .activity-calendar-entry.customized,
+      .partner-scaffold-placeholder
+    ) {
+      background: linear-gradient(135deg, #FFF6FA, #FFFFFF) !important;
+    }
+    :is(
+      .stress-title,
+      .stress-stat-value,
+      .stress-interpretation-title,
+      .activity-calendar-entry-title,
+      .share-code-value,
+      .partner-scaffold-title,
+      .partner-chat-empty-headline
+    ) {
+      color: #A02050 !important;
+    }
+    :is(
+      .stress-subtitle,
+      .stress-stat-label,
+      .stress-interpretation-copy,
+      .activity-calendar-entry-meta,
+      .share-code-hint,
+      .partner-scaffold-body,
+      .partner-chat-empty-body
+    ) {
+      color: rgba(94, 43, 66, 0.72) !important;
+    }
+    :is(
+      .period-editor-overlay,
+      #oracle-backdrop,
+      #claude-backdrop,
+      .period-edit-modal,
+      .modal-overlay
+    ) {
+      background: rgba(43, 16, 32, 0.24) !important;
+    }
+    :is(
+      .paywall-container,
+      .paywall-code-input,
+      .paywall-plan,
+      .partner-chat-input,
+      .activity-edit-input,
+      .period-edit-input,
+      #oracle-input,
+      #claude-input
+    ) {
+      background: #FFF6FA !important;
+      color: #2B1020 !important;
+      border-color: #F1CAD6 !important;
+    }
+    :is(
+      .paywall-code-submit,
+      .paywall-plan:first-child,
+      .partner-chat-send-btn
+    ) {
+      background: #A02050 !important;
+      color: #FFFFFF !important;
+      border-color: #A02050 !important;
+    }
+    .paywall-moon {
+      display: none !important;
+    }
   </style>
-  <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-nthJbUX0.js"></script>
+  <script type="module" crossorigin src="/predict-her-viewer/app/assets/index-Ccy4Bg3X.js"></script>
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/astro-CKYIcK6G.js">
   <link rel="modulepreload" crossorigin href="/predict-her-viewer/app/assets/three-Bv1OsDGp.js">
 </head>
@@ -14301,7 +14400,7 @@
 
         <div class="reading-hero">
           <div class="reading-title" style="font-size: 26px;">Synchronicity</div>
-          <div class="synch-section-hint" style="text-align: center; margin: 4px 0 0;">Track intentions & notice the magic</div>
+          <div class="synch-section-hint" style="text-align: center; margin: 4px 0 0;">Track intentions, patterns & meaningful moments</div>
         </div>
 
         <div id="synch-content"></div>
@@ -14326,7 +14425,7 @@
           <!-- Phase D will populate: moon hero, "she's on Day X" strip, "what's happening", "your one move", smart chips, micro-lesson -->
           <div class="partner-scaffold-placeholder">
             <div class="partner-scaffold-title">Today</div>
-            <div class="partner-scaffold-body">Coming in the next build — your daily card with the one move that lands for today.</div>
+            <div class="partner-scaffold-body">This section is unavailable right now. Your daily partner guidance will appear here when partner mode is active.</div>
           </div>
         </div>
       </div><!-- /tab-partner-today -->
@@ -14357,7 +14456,7 @@
           <!-- Phase F will populate: chat history, smart suggestion chips, input row, freemium counter -->
           <div class="partner-scaffold-placeholder">
             <div class="partner-scaffold-title">Chat</div>
-            <div class="partner-scaffold-body">Coming in the next build — ask anything, get repair scripts, decode behavior through cycle context.</div>
+            <div class="partner-scaffold-body">This section is unavailable right now. Partner chat will appear here when your account has access.</div>
           </div>
         </div>
       </div><!-- /tab-partner-chat -->
